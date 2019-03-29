@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Curiosities</ion-title>
+    </ion-toolbar>
+ </ion-header>
+
+<ion-content>
+<div class="container" *ngFor="let cc of curiosities">
+<div class="card bg-info mt-3">
+  <div class="card-body">
+
+    <p class="card-text">Name: {{cc.name}}</p>
+    <p class="card-text">House: {{ c.house }}</p>
+    <p class="card-text">School: {{ c.school }}</p>
+    <p class="card-text">Blood Type: {{ c.bloodStatus }}</p>
+    <p class="card-text">Species: {{ c.species }}</p>
+
+  </div>
+</div>
+</div> 
+</ion-content>
