@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Houses</ion-title>
+    </ion-toolbar>
+ </ion-header>
+
+<ion-content>
+    <ion-searchbar showCancelButton cancelButtonText="Cancel" color="medium"></ion-searchbar>
+
+  <ion-card *ngFor="let h of houses">
+    <ion-card-header>
+      <ion-card-subtitle>House:</ion-card-subtitle>
+      <ion-card-title>Name: {{h.name}}</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-card-subtitle>Mascot: {{h.mascot}}</ion-card-subtitle>
+      <ion-card-subtitle>Head of House: {{h.headOfHouse}}</ion-card-subtitle>
+      <ion-card-subtitle>House Ghost: {{h.houseGhost}}</ion-card-subtitle>
+      <ion-card-subtitle>Founder: {{h.founder}}</ion-card-subtitle>
+      <ion-card-subtitle>School: {{h.school}}</ion-card-subtitle>
+      <ion-card-subtitle>Values: {{h.values}}</ion-card-subtitle>
+      <ion-card-subtitle>Colors: {{h.colors}}</ion-card-subtitle>
+      <ion-card-subtitle>Members: {{h.members}}</ion-card-subtitle>
+
+
+
+    </ion-card-content>
+    </ion-card>
+</ion-content>

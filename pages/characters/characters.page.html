@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar color="danger">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+          </ion-buttons>
+      <ion-title>Characters</ion-title>
+    </ion-toolbar>
+ </ion-header>
+
+<ion-content>
+    <ion-searchbar [(ngModel)]= "characters_name" showCancelButton cancelButtonText="Cancel" color="medium" animated placeholder="localize" (change)="consultaCharacters()"></ion-searchbar>
+
+<ion-card *ngFor="let c of characters">
+  <ion-card-header>
+    <ion-card-subtitle>Wizard(witch):</ion-card-subtitle>
+    <ion-card-title>Name: {{c.name}}</ion-card-title>
+  </ion-card-header>
+
+  <ion-card-content>
+    <ion-card-subtitle>House: {{c.house}}</ion-card-subtitle>
+    <ion-card-subtitle>School: {{c.school}}</ion-card-subtitle>
+    <ion-card-subtitle>Blood Type: {{c.bloodStatus}}</ion-card-subtitle>
+    <ion-card-subtitle>Species: {{c.species}}</ion-card-subtitle>
+
+    
+
+  </ion-card-content>
+</ion-card>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-title>spells</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-searchbar showCancelButton cancelButtonText="Cancel" color="medium"></ion-searchbar>
+
+    <ion-card *ngFor="let s of spells">
+        <ion-card-header>
+          <ion-card-subtitle>Spell:</ion-card-subtitle>
+          <ion-card-title>Spell's Name: {{s.spell}}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-card-subtitle>Type: {{s.type}}</ion-card-subtitle>
+          <ion-card-subtitle>Effect: {{s.effect}}</ion-card-subtitle>
+          </ion-card-content>
+        </ion-card>
+</ion-content>
